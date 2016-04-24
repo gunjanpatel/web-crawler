@@ -19,12 +19,12 @@ if (!is_null($anchors))
 	{
 		$job = new stdClass;
 
-		$job->url = $Crawler->absToReal($element->getAttribute('href')); //'Agile Coach - Spotify.html';
+		$job->url = $Crawler->absToReal($element->getAttribute('href'));
 
 		$child = (new App($job->url))->Crawl();
 
 		$jobElement = $child->xpathQuery("//div[@class='job-description']");
-		$jobDescriptions = $jobElement[0]->childNodes;
+		$jobDescriptions = $jobElement->item(0)->childNodes;
 
 		$job->headlines = '';
 

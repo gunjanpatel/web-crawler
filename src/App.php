@@ -47,11 +47,11 @@ class App
 
 			if (extension_loaded('http'))
 			{
-				$href = http_build_url($url, array('path' => $path));
+				$href = http_build_url($this->url, array('path' => $path));
 			}
 			else
 			{
-				$parts = parse_url($url);
+				$parts = parse_url($this->url);
 				$href = $parts['scheme'] . '://';
 
 				if (isset($parts['user']) && isset($parts['pass']))
