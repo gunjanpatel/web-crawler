@@ -1,0 +1,16 @@
+{
+    "name": "gunjanpatel/crawler",
+    "type": "application",
+    "description": "A configurable and extensible PHP web spider",
+    "keywords": ["spider", "crawler", "scraper"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Gunjan Patel",
+            "email": "me@gunjanpatel.info"
+        }
+    ],
+    "autoload": {
+        "psr-4": {"Crawler\\": "src/"}
+    }
+}
